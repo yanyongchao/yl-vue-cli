@@ -6,6 +6,7 @@ vue.config.js
 babel.config.js
 *.map
 *.html
+.git
 
 # local env files
 .env.local
