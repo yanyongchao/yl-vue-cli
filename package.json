@@ -1,6 +1,6 @@
 {
-  "name": "yl-vue-cli",
-  "version": "0.0.1",
+  "name": "yx-vue-cli",
+  "version": "0.0.2",
   "description": "这是一个快速创建项目的cli",
   "main": "index.js",
   "private": false,
@@ -8,19 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "yl-vue-cli": "index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yanyongchao/yl-vue-cli.git"
+    "yx-vue-cli": "index.js"
   },
   "keywords": [],
   "author": "yanyongchao",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yanyongchao/yl-vue-cli/issues"
-  },
-  "homepage": "https://github.com/yanyongchao/yl-vue-cli#readme",
   "dependencies": {
     "chalk": "^2.4.1",
     "commander": "^2.19.0",

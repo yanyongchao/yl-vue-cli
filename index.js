@@ -11,9 +11,9 @@ const git = require('simple-git')()
 
 program
   .command('init <name>')
-  .description('创建一个项目，name必填')
-  .option('-g, --git', '项目创建后自动初始化git,默认手动')
-  .option('-s, --ssh', '使用ssh方式下载模板,默认http方式')
+  .description('创建一个项目，yx-vue-cli init {name}')
+  .option('-g, --git', '使用git方式下载模板')
+  .option('-s, --ssh', '使用ssh方式下载模板')
   .action((name, cmd) => {
     if (!fs.existsSync(name)) {
       const options = [
@@ -32,9 +32,9 @@ program
         .then(answers => {
           const spinner = ora('正在下载模板...')
           spinner.start()
-          let url = 'https://github.com/yanyongchao/yl-vue-cli.git'
+          let url = 'https://github.com/yanyongchao/yl-vue-template.git'
           if (cmd.ssh) {
-            url = 'git@github.com:yanyongchao/yl-vue-cli.git'
+            url = 'git@github.com:yanyongchao/yl-vue-template.git'
           }
           const handlerFn = (err) => {
             if (err) {
@@ -58,9 +58,9 @@ program
               console.log(`------请按下列命令设置git------`)
               console.log(`cd ${name} && git init`)
               if (cmd.ssh) {
-                console.log(`git remote add origin git@github.com:yanyongchao/${name}.git`)
+                console.log(`git remote add origin {you project git address}`)
               } else {
-                console.log(`git remote add origin https://github.com/yanyongchao/${name}.git`)
+                console.log(`git remote add origin {you project git address}`)
               }
               console.log(`git add ./*`)
               console.log(`git commit -m first commit!`)
